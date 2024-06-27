@@ -13,7 +13,7 @@ class LRUCache(BaseCaching):
     def put(self, key, item):
         """Assign item to given key in cache"""
         if (key is not None and item is not None):
-            if len(self.cache_data) == BaseCaching.MAX_ITEMS:
+            if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 least_used = self.use_queue.pop(0)
                 self.cache_data.pop(least_used)
                 print(f"DISCARD: {least_used}")
