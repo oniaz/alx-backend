@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ doc doc doc """
-BaseCaching = __import__('base_caching').BaseCaching
+BaseCaching = __import__("base_caching").BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """LRU Class"""
+    """doc doc doc"""
 
     def __init__(self):
         """doc doc doc"""
