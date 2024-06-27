@@ -3,7 +3,7 @@
 BaseCaching = __import__("base_caching").BaseCaching
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     """doc doc doc"""
 
     def __init__(self):
@@ -15,7 +15,7 @@ class LRUCache(BaseCaching):
         """doc doc doc"""
         if key and item:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-                removed = self.order.pop(0)
+                removed = self.order.pop()
                 self.cache_data.pop(removed)
                 print("DISCARD: {}".format(removed))
             self.cache_data[key] = item
