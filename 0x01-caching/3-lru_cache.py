@@ -16,9 +16,10 @@ class LRUCache(BaseCaching):
         if (key is not None and item is not None):
             if len(self.cache_data) == BaseCaching.MAX_ITEMS:
                 least_used = list(self.use_queue.keys())[0]
-                del self.cache_data[least_used]
                 del self.use_queue[least_used]
-                print(f"DISCARD: {least_used}")
+                if (key not in self.cache_data):
+                    del self.cache_data[least_used]
+                    print(f"DISCARD: {least_used}")
             self.cache_data[key] = item
             if key in self.use_queue:
                 del self.use_queue[key]
