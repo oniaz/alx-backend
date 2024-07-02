@@ -24,7 +24,7 @@ app.config.from_object(Config)
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """
     Determine the best match for the user's preferred language based on
     request headers
@@ -33,7 +33,7 @@ def get_locale():
 
 
 @app.route('/')
-def home():
+def home() -> str:
     """
     Render the home page.
     """
