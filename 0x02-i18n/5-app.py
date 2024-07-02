@@ -65,6 +65,9 @@ def before_request():
 
 @app.route('/')
 def home():
+    """
+    home page
+    """
     return render_template('5-index.html')
 
 
