@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-0x02. i18n Project
+1. Basic Babel setup
 """
 from flask_babel import Babel
 from flask import Flask, render_template
