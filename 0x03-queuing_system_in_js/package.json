@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "lint": "./node_modules/.bin/eslint",
         "check-lint": "lint [0-9]*.js",
@@ -15,7 +16,7 @@
         "chai-http": "^4.3.0",
         "express": "^4.17.1",
         "kue": "^0.11.6",
-        "redis": "^2.8.0"
+        "redis": "^4.7.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.0",
